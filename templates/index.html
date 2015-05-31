@@ -1,0 +1,87 @@
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<script type="text/javascript" src="http://www.francescomalagrino.com/BootstrapPageGenerator/3/js/jquery-2.0.0.min.js"></script>
+<script type="text/javascript" src="http://www.francescomalagrino.com/BootstrapPageGenerator/3/js/jquery-ui"></script>
+<link href="http://www.francescomalagrino.com/BootstrapPageGenerator/3/css/bootstrap-combined.min.css" rel="stylesheet" media="screen">
+<script type="text/javascript" src="http://www.francescomalagrino.com/BootstrapPageGenerator/3/js/bootstrap.min.js"></script>
+</head>
+<body>
+<div class="container-fluid">
+	<div class="row-fluid">
+		<div class="span12">
+			<div class="page-header">
+				<h1>
+					刘鹏的博客
+				</h1>
+			</div>
+			<ul class="nav nav-pills">
+				<li class="active">
+					<a href="#">首页</a>
+				</li>
+				<li>
+					<a href="http://127.0.0.1:5000/grzx/">个人信息</a>
+				</li>
+			</ul>
+		</div>
+	</div>
+	<div class="row-fluid">
+		<div class="span8">
+			<div class="panel panel-default">
+				<div class="panel-heading">
+					<h3 class="panel-title">
+						文章
+					</h3>
+				</div>
+				{%for i in title%}
+				{%if loop.index%2==1%}
+				<div class="panel-body" style="word-break: break-all;">	
+				<a href="http://127.0.0.1:5000/blog/{{i[1]}}">{{i[0]}}</a>
+				</div>
+				{%else%}
+				<div class="panel-footer" style="word-break: break-all;border: 0px solid #A9C9E2;">	
+				<a href="http://127.0.0.1:5000/blog/{{i[1]}}">{{i[0]}}</a>
+				</div>
+				{%endif%}
+				{%endfor%}
+			</div>
+		</div>
+		<div class="span4" >
+			<div class="panel panel-default">
+				<div class="panel-heading">
+					<h3 class="panel-title" style="word-break: break-all;">
+						留言
+					</h3>
+				</div>
+				{%for i in liuyan%}
+				{%if loop.index%2==1%}
+				<div class="panel-body" style="word-break: break-all;border: 0px solid #A9C9E2;">	
+				{{i[0]}}<br>{{i[1]}}				
+				</div>
+				{%else%}
+				<div class="panel-footer" style="word-break: break-all;border: 0px solid #A9C9E2;">	
+				{{i[0]}}<br>{{i[1]}}
+				</div>
+				{%endif%}
+				{%endfor%}
+				<form active="" method="post" enty>
+						<fieldset>
+							 <legend>留言</legend> 
+							 <input type="text"  name="text" /> 
+							 <button type="submit" class="btn">提交</button>
+						</fieldset>
+				</form>
+			</div>
+		</div>
+	</div>
+</div>
+<script>
+	$(document).on('click', '.article-link', function(event){
+		var $target = event.target;
+		console.log($target);
+		event.preventDefault();
+	});
+	
+</script>
+</body>
+</html>

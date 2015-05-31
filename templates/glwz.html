@@ -1,0 +1,54 @@
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<script type="text/javascript" src="http://www.francescomalagrino.com/BootstrapPageGenerator/3/js/jquery-2.0.0.min.js"></script>
+<script type="text/javascript" src="http://www.francescomalagrino.com/BootstrapPageGenerator/3/js/jquery-ui"></script>
+<link href="http://www.francescomalagrino.com/BootstrapPageGenerator/3/css/bootstrap-combined.min.css" rel="stylesheet" media="screen">
+<script type="text/javascript" src="http://www.francescomalagrino.com/BootstrapPageGenerator/3/js/bootstrap.min.js"></script>
+</head>
+<body>
+<div class="container-fluid">
+	<div class="row-fluid">
+		<div class="span12">
+			<div class="page-header">
+				<h1>
+					管理员界面
+				</h1>
+			</div>
+			<ul class="nav nav-tabs">
+				<li class="active">
+					<a href="http://127.0.0.1:5000/ggrxx/">个人信息</a>
+				</li>
+				<li>
+					<a href="http://127.0.0.1:5000/fbwz/">发布文章</a>
+				</li>
+				<li class="disabled">
+					<a href="http://127.0.0.1:5000/glwz/">管理文章</a>
+				</li>
+				<li>
+					<a href="http://127.0.0.1:5000/glpl/">管理留言</a>
+				</li>
+			</ul>
+			<div class="panel panel-default">
+				<div class="panel-heading">
+					<h3 class="panel-title">
+						文章
+					</h3>
+				</div>
+				{%for i in title%}
+				{%if loop.index%2==1%}
+				<div class="panel-body" style="word-break: break-all;">	
+				<a href="http://127.0.0.1:5000/blog/{{i[1]}}">{{i[0]}}</a><a style="float:right;" href="http://127.0.0.1:5000/dblog/{{i[1]}}">删除</a>
+				</div>
+				{%else%}
+				<div class="panel-footer" style="word-break: break-all;border: 0px solid #A9C9E2;">	
+				<a href="http://127.0.0.1:5000/blog/{{i[1]}}">{{i[0]}}</a><a style="float:right;" href="http://127.0.0.1:5000/dblog/{{i[1]}}">删除</a>
+				</div>
+				{%endif%}
+				{%endfor%}
+			</div>
+		</div>
+	</div>
+</div>
+</body>
+</html>

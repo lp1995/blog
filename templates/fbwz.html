@@ -1,0 +1,52 @@
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<script type="text/javascript" src="http://www.francescomalagrino.com/BootstrapPageGenerator/3/js/jquery-2.0.0.min.js"></script>
+<script type="text/javascript" src="http://www.francescomalagrino.com/BootstrapPageGenerator/3/js/jquery-ui"></script>
+<link href="http://www.francescomalagrino.com/BootstrapPageGenerator/3/css/bootstrap-combined.min.css" rel="stylesheet" media="screen">
+<script type="text/javascript" src="http://www.francescomalagrino.com/BootstrapPageGenerator/3/js/bootstrap.min.js"></script>
+</head>
+<body>
+<div class="container-fluid">
+	<div class="row-fluid">
+		<div class="span12">
+			<div class="page-header">
+				<h1>
+					管理员界面
+				</h1>
+			</div>
+			<ul class="nav nav-tabs">
+				<li class="active">
+					<a href="http://127.0.0.1:5000/ggrxx/">个人信息</a>
+				</li>
+				<li>
+					<a href="http://127.0.0.1:5000/fbwz/">发布文章</a>
+				</li>
+				<li class="disabled">
+					<a href="http://127.0.0.1:5000/glwz/">管理文章</a>
+				</li>
+				<li>
+					<a href="http://127.0.0.1:5000/glpl/">管理留言</a>
+				</li>
+			</ul>
+			<form active="" method="post">
+			<h2>
+			<div class="controls">
+				输入文章标题 ：<input name="title" type="text" style="height:30px;width:400px;"/>
+			</div>
+				<span class="label">
+				输入文字标签（用“/”隔开）：<input name="tag" type="text" style="height:20px;width:350px;margin-top:5px;margin-bottom:5px;"/>
+				</span>
+
+			</h2>
+			<p>正文 ：</p>
+			<p>
+			<textarea name="zhengwen" cols="20" rows="20" style="width:800px;"></textarea>
+			</p>
+			<button type="submit" class="btn">发布</button>
+			</form>
+		</div>
+	</div>
+</div>
+</body>
+</html>
