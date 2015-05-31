@@ -48,7 +48,7 @@ def admin():
         else:
             return render_template('login_fail.html')
     else:
-            return render_template('login.html')
+        return render_template('login.html')
 
 @app.route('/ggrxx/',methods=['GET','POST'])
 def ggrxx():
